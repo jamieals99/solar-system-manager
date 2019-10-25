@@ -4,6 +4,7 @@
 # Except for these:
 !/.gitignore
 !/Assets
+!*.cs
 !/ProjectSettings
 
 
