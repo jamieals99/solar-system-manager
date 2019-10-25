@@ -28,13 +28,13 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown("a"))
         {
             transform.position = StartLocation;
             transform.position += CameraPosition2;
             transform.Rotate(75f, 0f, 0f);
         }
-        if(Input.GetKeyUp(KeyCode.A))
+        if(Input.GetKeyUp("a"))
         {
             transform.Rotate(-75f, 0f , 0f);
             transform.position = StartLocation;
