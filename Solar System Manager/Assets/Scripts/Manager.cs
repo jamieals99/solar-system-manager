@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// To add:
+/// - Have when escape is pressed to go out of the pause menu the game should return
+///     to the last game speed that was pressed. 
+/// </summary>
+
 public class Manager : MonoBehaviour
 {
     // --- Variable Declarations ----------------------------------------------------------------------------- //
@@ -14,7 +20,7 @@ public class Manager : MonoBehaviour
     [SerializeField]
     Text timeText; // Will assign time text to this variable so the text it displays can be modified.
 
-    
+
     bool isPaused; // For determining pause state.
 
     // --- Start() ------------------------------------------------------------------------------------------- //
@@ -31,11 +37,11 @@ public class Manager : MonoBehaviour
     {
         timeText.text = "Time Since Startup: " + Mathf.Round(Time.timeSinceLevelLoad) + " seconds"; // Displays the time since the scene loaded.
 
-        if(Input.GetKeyDown(KeyCode.Escape) && !isPaused) //If the esc key is pressed and the game isnt in a paused state run the Pause() function.
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused) //If the esc key is pressed and the game isnt in a paused state run the Pause() function.
         {
             Pause();
         }
-        else if(Input.GetKeyDown(KeyCode.Escape) && isPaused) //If the esc key is pressed and the game is in a paused state run the UnPause() function.
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused) //If the esc key is pressed and the game is in a paused state run the UnPause() function.
         {
             UnPause();
         }
@@ -60,6 +66,21 @@ public class Manager : MonoBehaviour
         Time.timeScale = 1f; // Resume the game.
     }
 
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+    }
+
+    public void UnPauseGame()
+    {
+        Time.timeScale = 1f;
+    }
+
+    public void DoubleSpeed()
+    {
+        Time.timeScale = 2f;
+    }
+
     // --- QuitGame() ---------------------------------------------------------------------------------------- //
 
     public void QuitGame()
@@ -73,4 +94,6 @@ public class Manager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // On call will load scene 0. ######## NEEDS TO BE CHANGED IF SCENE 0 IS NO LONGER THE GAMEPLAY SCENE #########
     }
+
+    
 }
