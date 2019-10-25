@@ -573,7 +573,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.7921569, g: 0.21136376, b: 0, a: 1}
     m_HighlightedColor: {r: 0.79215693, g: 0.45490196, b: 0, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.5754717, g: 0.15383898, b: 0, a: 1}
     m_DisabledColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -878,7 +878,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.7921569, g: 0.21136376, b: 0, a: 1}
     m_HighlightedColor: {r: 0.79215693, g: 0.45490196, b: 0, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.5754717, g: 0.15383898, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1774,7 +1774,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.7921569, g: 0.21136376, b: 0, a: 1}
     m_HighlightedColor: {r: 0.79215693, g: 0.45490196, b: 0, a: 1}
-    m_PressedColor: {r: 0.14646222, g: 0, b: 0.254717, a: 1}
+    m_PressedColor: {r: 0.5754717, g: 0.15383898, b: 0, a: 1}
     m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1902,7 +1902,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 76be78701975ec64886987f49b02d5d3, type: 2}
+  - {fileID: 2100000, guid: 26142b813944b814892f97c9fb1973cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
