@@ -14,6 +14,7 @@ public class Manager : MonoBehaviour
     [SerializeField]
     Text timeText; // Will assign time text to this variable so the text it displays can be modified.
 
+    
     bool isPaused; // For determining pause state.
 
     // --- Start() ------------------------------------------------------------------------------------------- //
@@ -70,6 +71,6 @@ public class Manager : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(0); // On call will load scene 0. ######## NEEDS TO BE CHANGED IF SCENE 0 IS NO LONGER THE GAMEPLAY SCENE #########
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // On call will load scene 0. ######## NEEDS TO BE CHANGED IF SCENE 0 IS NO LONGER THE GAMEPLAY SCENE #########
     }
 }
