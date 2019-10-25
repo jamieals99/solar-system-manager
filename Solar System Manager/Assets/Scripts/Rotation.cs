@@ -6,13 +6,12 @@ public class Rotation : MonoBehaviour
 {
 
     [SerializeField]
-    private Transform rotater;
+    private Transform rotatingObject; // Variable for storing the transform of the object that you want to rotate.
     [SerializeField]
-    private float rotationSpeed = 60f;
+    private float rotationSpeed = 60f; // Adjust this value to increase the speed of rotation.
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        rotater.Rotate(0, (rotationSpeed * Time.deltaTime), 0);
+        rotatingObject.Rotate(0, (rotationSpeed * Time.deltaTime), 0); // Rotates the object on its y axis only.
     }
 }
