@@ -9,12 +9,12 @@ public class Manager : MonoBehaviour
     // --- Variable Declarations ----------------------------------------------------------------------------- //
 
     [SerializeField]
-    private Transform UIPanel; // Will assign panel to this variable so it can be enabled/disabled.
+    Transform UIPanel; // Will assign panel to this variable so it can be enabled/disabled.
 
     [SerializeField]
-    private Text timeText; // Will assign time text to this variable so the text it displays can be modified.
+    Text timeText; // Will assign time text to this variable so the text it displays can be modified.
 
-    private bool isPaused; // For determining pause state.
+    bool isPaused; // For determining pause state.
 
     // --- Start() ------------------------------------------------------------------------------------------- //
 
