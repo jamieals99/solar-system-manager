@@ -1766,7 +1766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e28d6c9d38cc0c74e85fdfef3abf65b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIPanel: {fileID: 875981840}
+  pauseMenu: {fileID: 0}
+  gameUI: {fileID: 0}
   timeText: {fileID: 41592597}
   pointText: {fileID: 89344201}
   timerText: {fileID: 1570564568}
@@ -1935,7 +1936,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1441506728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 088935fba0971024ca5395e2298f3a12, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ed5f5a68a0b372478c8ad2ca642a5fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &1441506731

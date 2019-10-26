@@ -63,7 +63,7 @@ public class Manager : MonoBehaviour
         }
 
         timeText.text = "Time Since Startup: " + Mathf.Round(Time.timeSinceLevelLoad) + " seconds"; // Displays the time since the scene loaded.
-        score = (ScoreTrigger.planetScore + MoonScoreTrigger.moonScore);
+        score = (ScoreTrigger.Score);
         pointText.text = "Score: " + score;
 
         if (Input.GetKeyDown(KeyCode.Escape) && !isPaused) //If the esc key is pressed and the game isnt in a paused state run the Pause() function.
