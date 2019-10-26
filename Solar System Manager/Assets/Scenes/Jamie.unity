@@ -2419,11 +2419,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e28d6c9d38cc0c74e85fdfef3abf65b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 875981840}
-  gameUI: {fileID: 1389342526}
-  timeText: {fileID: 41592597}
-  pointText: {fileID: 1813479433}
-  timerText: {fileID: 926984399}
+  pauseMenu: {fileID: 0}
+  gameUI: {fileID: 0}
+  timeText: {fileID: 0}
+  pointText: {fileID: 0}
+  timerText: {fileID: 0}
   mainTimer: 10
 --- !u!4 &1319937451
 Transform:
