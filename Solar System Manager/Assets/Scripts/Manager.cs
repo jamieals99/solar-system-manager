@@ -28,14 +28,13 @@ public class Manager : MonoBehaviour
     private bool canCount = true;
     private bool doOnce = false;
 
-    float score;
-
     bool isPaused; // For determining pause state.
 
     // --- Start() ------------------------------------------------------------------------------------------- //
 
     void Start()
     {
+
         timer = mainTimer;
         pauseMenu.gameObject.SetActive(false); // Pause menu will be disabled on startup.
         gameUI.gameObject.SetActive(true);
@@ -63,8 +62,7 @@ public class Manager : MonoBehaviour
         }
 
         timeText.text = "Time Since Startup: " + Mathf.Round(Time.timeSinceLevelLoad) + " seconds"; // Displays the time since the scene loaded.
-        score = (ScoreTrigger.Score);
-        pointText.text = "Score: " + score;
+        pointText.text = "Score: " + ScoreTrigger.Score;
 
         if (Input.GetKeyDown(KeyCode.Escape) && !isPaused) //If the esc key is pressed and the game isnt in a paused state run the Pause() function.
         {
@@ -128,9 +126,9 @@ public class Manager : MonoBehaviour
 
     public void Restart()
     {
+        ScoreTrigger.Score = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // On call will load scene 0. ######## NEEDS TO BE CHANGED IF SCENE 0 IS NO LONGER THE GAMEPLAY SCENE #########
         Time.timeScale = 1f;
-        score = 0;
     }
 
     public void loadGame()
@@ -140,6 +138,7 @@ public class Manager : MonoBehaviour
 
     public void loadStartMenu()
     {
+        ScoreTrigger.Score = 0;
         SceneManager.LoadScene(0);
     }
     
