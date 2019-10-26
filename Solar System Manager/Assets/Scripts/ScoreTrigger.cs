@@ -2,7 +2,7 @@
 
 public class ScoreTrigger : MonoBehaviour
 {
-    public static float Score = -110; // Score starts at -100 as object starts in triggerbox.
+    public static float Score = 0; // Score starts at -100 as object starts in triggerbox.
 
     void OnTriggerEnter(Collider collision)
     {
