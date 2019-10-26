@@ -22,7 +22,7 @@ public class Manager : MonoBehaviour
 
     [SerializeField] private float mainTimer;
 
-    private float timer;
+    public static float timer;
     private bool canCount = true;
     private bool doOnce = false;
 
