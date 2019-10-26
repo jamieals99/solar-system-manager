@@ -19,7 +19,7 @@ public class EndVideo : MonoBehaviour
             var videoPlayer = camera.AddComponent<UnityEngine.Video.VideoPlayer>();
             videoPlayer.playOnAwake = false;
             videoPlayer.renderMode = UnityEngine.Video.VideoRenderMode.CameraNearPlane;
-            videoPlayer.url = "C:/Users/Teamknowhow/Documents/GitHub/solar-system-manager/Solar System Manager/Assets/Pictures/Solar System Blowing Up.mp4";
+            videoPlayer.url = "file://Assets/Pictures/SolarSystemBlowingUp.mp4";
             videoPlayer.isLooping = false;
             videoPlayer.loopPointReached += EndReached;
             videoPlayer.Play();
