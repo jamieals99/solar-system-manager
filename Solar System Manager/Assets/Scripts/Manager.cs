@@ -20,6 +20,10 @@ public class Manager : MonoBehaviour
     [SerializeField]
     Text timeText; // Will assign time text to this variable so the text it displays can be modified.
 
+    [SerializeField]
+    Text pointText; // Will be used to assign the points-txt to this script.
+
+    //int totalScore = ScoreTrigger.planetScore + MoonScoreTrigger.moonScore;
 
     bool isPaused; // For determining pause state.
 
@@ -36,6 +40,7 @@ public class Manager : MonoBehaviour
     void Update()
     {
         timeText.text = "Time Since Startup: " + Mathf.Round(Time.timeSinceLevelLoad) + " seconds"; // Displays the time since the scene loaded.
+        pointText.text = "Points: " + (ScoreTrigger.planetScore + MoonScoreTrigger.moonScore);
 
         if (Input.GetKeyDown(KeyCode.Escape) && !isPaused) //If the esc key is pressed and the game isnt in a paused state run the Pause() function.
         {
@@ -66,15 +71,21 @@ public class Manager : MonoBehaviour
         Time.timeScale = 1f; // Resume the game.
     }
 
+    // --- PauseGame() --------------------------------------------------------------------------------------- //
+
     public void PauseGame()
     {
         Time.timeScale = 0f;
     }
 
+    // --- UnPauseGame() ------------------------------------------------------------------------------------- //
+
     public void UnPauseGame()
     {
         Time.timeScale = 1f;
     }
+
+    // --- DoubleSpeed() ------------------------------------------------------------------------------------- //
 
     public void DoubleSpeed()
     {
