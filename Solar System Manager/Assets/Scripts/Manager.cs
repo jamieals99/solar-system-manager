@@ -20,6 +20,8 @@ public class Manager : MonoBehaviour
 
     [SerializeField] Text pointText; // Will be used to assign the points-txt to this script.
 
+    [SerializeField] Text matterText;
+
     [SerializeField] private Text timerText;
 
     [SerializeField] private float mainTimer;
@@ -44,9 +46,7 @@ public class Manager : MonoBehaviour
     // --- Update() ------------------------------------------------------------------------------------------ //
 
     void Update()
-    {   
-
-
+    {
         if (timer>= 0.0f&& canCount)
         {
             timer -= Time.deltaTime;
@@ -63,6 +63,7 @@ public class Manager : MonoBehaviour
 
         timeText.text = "Time Since Startup: " + Mathf.Round(Time.timeSinceLevelLoad) + " seconds"; // Displays the time since the scene loaded.
         pointText.text = "Score: " + Mathf.Round(ScoreTrigger.Score);
+        matterText.text = "Matter: " + Mathf.Round(ResourceGeneration.resources);
 
         if (Input.GetKeyDown(KeyCode.Escape) && !isPaused) //If the esc key is pressed and the game isnt in a paused state run the Pause() function.
         {
@@ -126,9 +127,15 @@ public class Manager : MonoBehaviour
 
     public void Restart()
     {
-        ScoreTrigger.Score = 0;
+        resetData();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // On call will load scene 0. ######## NEEDS TO BE CHANGED IF SCENE 0 IS NO LONGER THE GAMEPLAY SCENE #########
         Time.timeScale = 1f;
+    }
+
+    private void resetData()
+    {
+        ScoreTrigger.Score = 0;
+        ResourceGeneration.resources = 0;
     }
 
     public void loadGame()
@@ -138,7 +145,7 @@ public class Manager : MonoBehaviour
 
     public void loadStartMenu()
     {
-        ScoreTrigger.Score = 0;
+        resetData();
         SceneManager.LoadScene(0);
     }
     
