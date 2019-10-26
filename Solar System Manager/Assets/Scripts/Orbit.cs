@@ -7,7 +7,7 @@ public class Orbit : MonoBehaviour
     [SerializeField]
     private Vector3 axis = new Vector3(0, 1, 0); // Creates a new vector3 variable with values only on the y axis. This is so that the object will by default revolve around the y axis.
     [SerializeField]
-    private float radius = 2f; // Adjustable radius variable
+    public float radius = 2f; // Adjustable radius variable
     [SerializeField]
     private float orbitSpeed = 60f; // Adjustable orbit speed variable
 
