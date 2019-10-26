@@ -12,7 +12,7 @@ public class PlanetManager : MonoBehaviour
     private int orbitNumber = 0; //reference to array, starts at 0, counts up when Orbits get added
    
     private Camera mainCamera;
-    private float startFOV = 20;
+    public float startFOV = 20;
     public float fovAddition = 15; // Amount by which FOC increases when creating a planet
 
     // Start is called before the first frame update
