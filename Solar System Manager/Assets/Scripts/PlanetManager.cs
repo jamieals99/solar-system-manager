@@ -8,8 +8,8 @@ public class PlanetManager : MonoBehaviour
     //public GameObject planet;
     public GameObject[] planets; // Array of all planets in order
     public GameObject[] orbits; // Array of all orbits in order
-    private int planetNumber = 0; // reference to array, starts at 0, counts up when Planets get added
-    private int orbitNumber = 0; //reference to array, starts at 0, counts up when Orbits get added
+    public int planetNumber = 1; // reference to array, starts at 0, counts up when Planets get added
+    public int orbitNumber = 1; //reference to array, starts at 0, counts up when Orbits get added
    
     private Camera mainCamera;
     public float startFOV = 20;
