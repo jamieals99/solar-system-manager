@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -14,16 +12,20 @@ public class Manager : MonoBehaviour
 {
     // --- Variable Declarations ----------------------------------------------------------------------------- //
 
-    [SerializeField]
-    Transform UIPanel; // Will assign panel to this variable so it can be enabled/disabled.
+    [SerializeField] Transform UIPanel; // Will assign panel to this variable so it can be enabled/disabled.
 
-    [SerializeField]
-    Text timeText; // Will assign time text to this variable so the text it displays can be modified.
+    [SerializeField] Text timeText; // Will assign time text to this variable so the text it displays can be modified.
 
-    [SerializeField]
-    Text pointText; // Will be used to assign the points-txt to this script.
+    [SerializeField] Text pointText; // Will be used to assign the points-txt to this script.
 
-    //int totalScore = ScoreTrigger.planetScore + MoonScoreTrigger.moonScore;
+    [SerializeField] private Text timerText;
+
+    [SerializeField] private float mainTimer;
+
+    private float timer;
+    private bool canCount = true;
+    private bool doOnce = false;
+
 
     bool isPaused; // For determining pause state.
 
@@ -31,6 +33,7 @@ public class Manager : MonoBehaviour
 
     void Start()
     {
+        timer = mainTimer;
         UIPanel.gameObject.SetActive(false); // Pause menu will be disabled on startup.
         isPaused = false; // Makes sure isPaused is false when the scene starts.
     }
@@ -38,9 +41,25 @@ public class Manager : MonoBehaviour
     // --- Update() ------------------------------------------------------------------------------------------ //
 
     void Update()
-    {
+    {   
+
+
+        if (timer>= 0.0f&& canCount)
+        {
+            timer -= Time.deltaTime;
+            timerText.text = "Timer: " + Mathf.Round(timer);//.ToString("F");
+        }
+
+        else if (timer<= 0.0f && !doOnce)
+        {
+            canCount = false;
+            doOnce = true;
+            timerText.text = "0.00f";
+            timer = 0.0f;
+        }
+
         timeText.text = "Time Since Startup: " + Mathf.Round(Time.timeSinceLevelLoad) + " seconds"; // Displays the time since the scene loaded.
-        pointText.text = "Points: " + (ScoreTrigger.planetScore + MoonScoreTrigger.moonScore);
+        pointText.text = "Score: " + (ScoreTrigger.planetScore + MoonScoreTrigger.moonScore);
 
         if (Input.GetKeyDown(KeyCode.Escape) && !isPaused) //If the esc key is pressed and the game isnt in a paused state run the Pause() function.
         {
@@ -50,7 +69,6 @@ public class Manager : MonoBehaviour
         {
             UnPause();
         }
-
     }
 
     // --- Pause() ------------------------------------------------------------------------------------------- //
