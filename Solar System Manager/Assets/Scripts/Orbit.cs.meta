@@ -3,7 +3,10 @@ guid: b9ae35faa9f170445846d8d0e5cf35b3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - centre: {instanceID: 0}
+  - PlanetPrefab: {fileID: 7175884331185377086, guid: 4a8aab5d8591f2c458e872765bd05dc9,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
