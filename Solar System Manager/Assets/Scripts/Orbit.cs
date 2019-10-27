@@ -9,7 +9,7 @@ public class Orbit : MonoBehaviour
     [SerializeField]
     public float radius = 2f; // Adjustable radius variable
     [SerializeField]
-    private float orbitSpeed = 60f; // Adjustable orbit speed variable
+    public float orbitSpeed = 60f; // Adjustable orbit speed variable
 
     void Start()
     {

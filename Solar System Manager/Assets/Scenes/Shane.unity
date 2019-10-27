@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0065611457, g: 0.008996767, b: 0.014047674, a: 1}
+  m_IndirectSpecularColor: {r: 0.007498448, g: 0.0089956075, b: 0.014728408, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -762,6 +762,7 @@ GameObject:
   - component: {fileID: 357762397}
   - component: {fileID: 357762396}
   - component: {fileID: 357762395}
+  - component: {fileID: 357762402}
   m_Layer: 0
   m_Name: planet (1)
   m_TagString: Planet
@@ -816,7 +817,6 @@ MonoBehaviour:
   centre: {fileID: 1367880097}
   axis: {x: 0, y: 50, z: 0}
   radius: 5
-  orbitSpeed: 60
 --- !u!114 &357762397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -899,6 +899,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2ca543116d9b7e48a91c5db095172b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &357762402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357762393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a296dd716ebae041903444cfc4941eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &416019150
@@ -1211,7 +1223,6 @@ MonoBehaviour:
   centre: {fileID: 1946276326}
   axis: {x: 0, y: 1, z: 0}
   radius: 1
-  orbitSpeed: 360
 --- !u!135 &510227750
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1352,7 +1363,6 @@ MonoBehaviour:
   centre: {fileID: 1367880097}
   axis: {x: 0, y: 50, z: 0}
   radius: 27
-  orbitSpeed: 60
 --- !u!114 &520660714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1643,7 +1653,6 @@ MonoBehaviour:
   centre: {fileID: 783532990}
   axis: {x: 0, y: 1, z: 0}
   radius: 1
-  orbitSpeed: 360
 --- !u!135 &536153056
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1967,7 +1976,6 @@ MonoBehaviour:
   centre: {fileID: 1367880097}
   axis: {x: 0, y: 50, z: 0}
   radius: 12
-  orbitSpeed: 60
 --- !u!114 &653654064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2527,7 +2535,6 @@ MonoBehaviour:
   centre: {fileID: 1367880097}
   axis: {x: 0, y: 50, z: 0}
   radius: 8
-  orbitSpeed: 60
 --- !u!114 &783532993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2824,7 +2831,6 @@ MonoBehaviour:
   centre: {fileID: 1367880097}
   axis: {x: 0, y: 50, z: 0}
   radius: 25
-  orbitSpeed: 60
 --- !u!114 &889320508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3263,7 +3269,11 @@ MonoBehaviour:
   - {fileID: 1466143844}
   - {fileID: 2144672446}
   - {fileID: 1140388791}
+  planetNumber: 0
+  orbitNumber: 0
+  startFOV: 20
   fovAddition: 10
+  cameraSpeed: 1
 --- !u!4 &987068832
 Transform:
   m_ObjectHideFlags: 0
@@ -3417,7 +3427,6 @@ MonoBehaviour:
   centre: {fileID: 1367880097}
   axis: {x: 0, y: 50, z: 0}
   radius: 20
-  orbitSpeed: 60
 --- !u!114 &1050198701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3726,7 +3735,6 @@ MonoBehaviour:
   centre: {fileID: 357762394}
   axis: {x: 0, y: 1, z: 0}
   radius: 1
-  orbitSpeed: 360
 --- !u!135 &1093048655
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4125,7 +4133,6 @@ MonoBehaviour:
   centre: {fileID: 1050198698}
   axis: {x: 0, y: 1, z: 0}
   radius: 1
-  orbitSpeed: 360
 --- !u!135 &1188088757
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4672,6 +4679,7 @@ GameObject:
   - component: {fileID: 1319937451}
   - component: {fileID: 1319937450}
   - component: {fileID: 1319937452}
+  - component: {fileID: 1319937453}
   m_Layer: 0
   m_Name: _GM
   m_TagString: Untagged
@@ -4724,6 +4732,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9a24aba56ff24193b63215afce415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1319937453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319937449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3b5155f24cc29459fe5466a254fbc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlanetLocation: {fileID: 0}
+  CameraLocation: {fileID: 0}
+  Offset: {x: 0, y: 0, z: 0}
+  StartLocation: {x: 0, y: 0, z: 0}
+  CameraPosition2: {x: 0, y: 90, z: 16}
+  xAxis: 0
+  yAxis: 0
+  zAxis: 0
+  StartRotation: {x: 0, y: 0, z: 0}
+  StartXRotation: 15
+  StartYRotation: 0
+  StartZRotation: 0
 --- !u!1 &1339785590
 GameObject:
   m_ObjectHideFlags: 0
@@ -5204,7 +5236,6 @@ MonoBehaviour:
   centre: {fileID: 653654061}
   axis: {x: 0, y: 1, z: 0}
   radius: 1
-  orbitSpeed: 360
 --- !u!135 &1440075497
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5624,7 +5655,6 @@ MonoBehaviour:
   centre: {fileID: 1960331599}
   axis: {x: 0, y: 1, z: 0}
   radius: 1
-  orbitSpeed: 360
 --- !u!135 &1512828433
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5854,7 +5884,6 @@ MonoBehaviour:
   centre: {fileID: 520660711}
   axis: {x: 0, y: 1, z: 0}
   radius: 1
-  orbitSpeed: 360
 --- !u!135 &1598695386
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6455,7 +6484,6 @@ MonoBehaviour:
   centre: {fileID: 889320505}
   axis: {x: 0, y: 1, z: 0}
   radius: 1
-  orbitSpeed: 360
 --- !u!135 &1826504129
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6673,7 +6701,6 @@ MonoBehaviour:
   centre: {fileID: 1367880097}
   axis: {x: 0, y: 50, z: 0}
   radius: 23
-  orbitSpeed: 60
 --- !u!114 &1946276329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6894,7 +6921,6 @@ MonoBehaviour:
   centre: {fileID: 1367880097}
   axis: {x: 0, y: 50, z: 0}
   radius: 16
-  orbitSpeed: 60
 --- !u!114 &1960331602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7056,7 +7082,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2075772639}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1319937453}
+        m_MethodName: CameraClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2075772639
 MonoBehaviour:
   m_ObjectHideFlags: 0
