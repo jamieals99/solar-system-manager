@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.007498448, g: 0.0089956075, b: 0.014728408, a: 1}
+  m_IndirectSpecularColor: {r: 0.0065611457, g: 0.008996767, b: 0.014047674, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -533,7 +533,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Unamed System Management Game
+  m_Text: Doesn't Matter!
 --- !u!222 &846538454
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -849,6 +849,10 @@ MonoBehaviour:
   pointText: {fileID: 0}
   matterText: {fileID: 0}
   createCost: {fileID: 0}
+  systemNameDisplay: {fileID: 0}
+  systemInputName: {fileID: 0}
+  timerText: {fileID: 0}
+  mainTimer: 0
 --- !u!4 &1509261841
 Transform:
   m_ObjectHideFlags: 0
