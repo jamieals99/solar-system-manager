@@ -2519,6 +2519,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a296dd716ebae041903444cfc4941eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sizeCostText: {fileID: 493785733}
+  speedCostText: {fileID: 1990838298}
+  moonCostText: {fileID: 2039630534}
   maxSizeUpgradeCount: 5
   sizeUpgradeCount: 0
   sizeUpgradeCost: 10
@@ -4067,6 +4070,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a296dd716ebae041903444cfc4941eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sizeCostText: {fileID: 1650742687}
+  speedCostText: {fileID: 1524195419}
+  moonCostText: {fileID: 1729961130}
   maxSizeUpgradeCount: 5
   sizeUpgradeCount: 0
   sizeUpgradeCost: 10
@@ -5292,6 +5298,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a296dd716ebae041903444cfc4941eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sizeCostText: {fileID: 756348330}
+  speedCostText: {fileID: 742785873}
+  moonCostText: {fileID: 1574059601}
   maxSizeUpgradeCount: 5
   sizeUpgradeCount: 0
   sizeUpgradeCost: 10
@@ -7518,6 +7527,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a296dd716ebae041903444cfc4941eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sizeCostText: {fileID: 1046842599}
+  speedCostText: {fileID: 169716032}
+  moonCostText: {fileID: 1626424246}
   maxSizeUpgradeCount: 5
   sizeUpgradeCount: 0
   sizeUpgradeCost: 10
@@ -8569,6 +8581,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a296dd716ebae041903444cfc4941eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sizeCostText: {fileID: 2142011818}
+  speedCostText: {fileID: 1454588152}
+  moonCostText: {fileID: 51243630}
   maxSizeUpgradeCount: 5
   sizeUpgradeCount: 0
   sizeUpgradeCost: 10
@@ -10107,6 +10122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a296dd716ebae041903444cfc4941eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sizeCostText: {fileID: 1008308394}
+  speedCostText: {fileID: 347136132}
+  moonCostText: {fileID: 902847447}
   maxSizeUpgradeCount: 5
   sizeUpgradeCount: 0
   sizeUpgradeCost: 10
@@ -19336,6 +19354,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a296dd716ebae041903444cfc4941eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sizeCostText: {fileID: 1668722368}
+  speedCostText: {fileID: 1679641482}
+  moonCostText: {fileID: 1087636777}
   maxSizeUpgradeCount: 5
   sizeUpgradeCount: 0
   sizeUpgradeCost: 10
@@ -19613,6 +19634,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a296dd716ebae041903444cfc4941eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sizeCostText: {fileID: 1831272817}
+  speedCostText: {fileID: 397124963}
+  moonCostText: {fileID: 695562166}
   maxSizeUpgradeCount: 5
   sizeUpgradeCount: 0
   sizeUpgradeCost: 10
