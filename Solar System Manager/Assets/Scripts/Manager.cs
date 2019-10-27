@@ -16,6 +16,8 @@ public class Manager : MonoBehaviour
 
     [SerializeField] Transform gameUI;
 
+    [SerializeField] Transform onStartUI;
+
     [SerializeField] Text timeText; // Will assign time text to this variable so the text it displays can be modified.
 
     [SerializeField] Text pointText; // Will be used to assign the points-txt to this script.
@@ -29,6 +31,7 @@ public class Manager : MonoBehaviour
     public static float timer;
     private bool canCount = true;
     private bool doOnce = false;
+    private bool gameStartCheck = false;
 
     bool isPaused; // For determining pause state.
 
@@ -39,7 +42,9 @@ public class Manager : MonoBehaviour
 
         timer = mainTimer;
         pauseMenu.gameObject.SetActive(false); // Pause menu will be disabled on startup.
-        gameUI.gameObject.SetActive(true);
+        gameUI.gameObject.SetActive(false);
+        onStartUI.gameObject.SetActive(true);
+        Time.timeScale = 0f;
         isPaused = false; // Makes sure isPaused is false when the scene starts.
     }
 
@@ -65,11 +70,11 @@ public class Manager : MonoBehaviour
         pointText.text = "Score: " + Mathf.Round(ScoreTrigger.Score);
         matterText.text = "Matter: " + Mathf.Round(ResourceGeneration.resources);
 
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused) //If the esc key is pressed and the game isnt in a paused state run the Pause() function.
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused && gameStartCheck) //If the esc key is pressed and the game isnt in a paused state run the Pause() function.
         {
             Pause();
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused) //If the esc key is pressed and the game is in a paused state run the UnPause() function.
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused && gameStartCheck) //If the esc key is pressed and the game is in a paused state run the UnPause() function.
         {
             UnPause();
         }
@@ -92,7 +97,7 @@ public class Manager : MonoBehaviour
         isPaused = false;
         pauseMenu.gameObject.SetActive(false); // Disable the pause screen.
         gameUI.gameObject.SetActive(true);
-        Time.timeScale = 1f; // Resume the game.
+        UnPauseGame(); // Resume the game.
     }
 
     // --- PauseGame() --------------------------------------------------------------------------------------- //
@@ -129,7 +134,7 @@ public class Manager : MonoBehaviour
     {
         resetData();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // On call will load scene 0. ######## NEEDS TO BE CHANGED IF SCENE 0 IS NO LONGER THE GAMEPLAY SCENE #########
-        Time.timeScale = 1f;
+        UnPauseGame();
     }
 
     private void resetData()
@@ -147,6 +152,12 @@ public class Manager : MonoBehaviour
     {
         resetData();
         SceneManager.LoadScene(0);
+    }
+
+    public void NameToGame()
+    {
+        onStartUI.gameObject.SetActive(false);
+        gameUI.gameObject.SetActive(true);
     }
     
 }
