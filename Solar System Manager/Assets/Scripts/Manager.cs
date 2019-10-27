@@ -53,7 +53,7 @@ public class Manager : MonoBehaviour
         if (timer>= 0.0f&& canCount)
         {
             timer -= Time.deltaTime;
-            timerText.text = "Timer: " + Mathf.Round(timer);//.ToString("F");
+            timerText.text = "Timer: " + Mathf.Round(timer);
         }
 
         else if (timer<= 0.0f && !doOnce)
