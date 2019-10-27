@@ -1097,7 +1097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.348, y: 35}
+  m_AnchoredPosition: {x: -44.999985, y: 29.000011}
   m_SizeDelta: {x: 102.69, y: 17.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &188336533
@@ -1131,7 +1131,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Planet Name
+  m_Text: Planet 7
 --- !u!222 &188336534
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1176,6 +1176,7 @@ MonoBehaviour:
   CameraLocation: {fileID: 204964161}
   Offset: {x: 0, y: 0, z: 0}
   StartLocation: {x: 0, y: 0, z: 0}
+  AfterhitLocation: {x: 0, y: 0, z: 0}
   CameraPosition2: {x: 0, y: 90, z: 16}
   xAxis: 0
   yAxis: 0
@@ -1184,6 +1185,11 @@ MonoBehaviour:
   StartXRotation: 15
   StartYRotation: 0
   StartZRotation: 0
+  HitLocation: {x: 0, y: 0, z: 0}
+  Apressed: 1
+  orbit: {fileID: 0}
+  Acounter: 0
+  manager: {fileID: 0}
 --- !u!81 &204964163
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1539,7 +1545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.79215693, g: 0.21176472, b: 0, a: 1}
+  m_Color: {r: 0.21787111, g: 0.9056604, b: 0.726477, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1672,7 +1678,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.348, y: 35}
+  m_AnchoredPosition: {x: -44.999985, y: 29.000011}
   m_SizeDelta: {x: 102.69, y: 17.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &262911988
@@ -1706,7 +1712,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Planet Name
+  m_Text: Planet 8
 --- !u!222 &262911989
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1749,7 +1755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.348, y: 35}
+  m_AnchoredPosition: {x: -44.999985, y: 29.000011}
   m_SizeDelta: {x: 102.69, y: 17.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &276443814
@@ -1783,7 +1789,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Planet Name
+  m_Text: Planet 4
 --- !u!222 &276443815
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2025,7 +2031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.79215693, g: 0.21176472, b: 0, a: 1}
+  m_Color: {r: 0.028889498, g: 0.3490566, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2168,8 +2174,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 161.60002, y: 55}
-  m_SizeDelta: {x: 185, y: 50}
+  m_AnchoredPosition: {x: 161.60002, y: 50}
+  m_SizeDelta: {x: 185, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &356448146
 MonoBehaviour:
@@ -2184,7 +2190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.392}
+  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.79607844}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2449,7 +2455,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  - {fileID: 2100000, guid: 0b8900fc4bafb3b4b8fdb227832fc31e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2543,7 +2549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d1c39d074497444a9eb6a902ad4ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  m_Material: {fileID: 2100000, guid: 78f642926f8c9d942b7d42dc63d23075, type: 2}
   subdivisions: 1
 --- !u!1 &362466601
 GameObject:
@@ -2740,7 +2746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.79215693, g: 0.21176472, b: 0, a: 1}
+  m_Color: {r: 0.9716981, g: 0.3907305, b: 0.1787558, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3614,8 +3620,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 161.60002, y: -65}
-  m_SizeDelta: {x: 185, y: 50}
+  m_AnchoredPosition: {x: 161.60002, y: -70}
+  m_SizeDelta: {x: 185, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &484369631
 MonoBehaviour:
@@ -3630,7 +3636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.392}
+  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.79607844}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4000,7 +4006,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  - {fileID: 2100000, guid: 76ff23c6444a4fd48b80964c8fa2127c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4094,7 +4100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d1c39d074497444a9eb6a902ad4ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  m_Material: {fileID: 2100000, guid: 76ff23c6444a4fd48b80964c8fa2127c, type: 2}
   subdivisions: 1
 --- !u!1 &521795011
 GameObject:
@@ -4576,8 +4582,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 161.60002, y: -145}
-  m_SizeDelta: {x: 185, y: 50}
+  m_AnchoredPosition: {x: 161.60002, y: -150}
+  m_SizeDelta: {x: 185, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &575600698
 MonoBehaviour:
@@ -4592,7 +4598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.392}
+  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.79607844}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4903,7 +4909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.392}
+  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.79607844}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4951,8 +4957,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 161.60002, y: -105}
-  m_SizeDelta: {x: 185, y: 50}
+  m_AnchoredPosition: {x: 161.60002, y: -110}
+  m_SizeDelta: {x: 185, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &644322359
 GameObject:
@@ -5228,7 +5234,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  - {fileID: 2100000, guid: 4d3d8974c16dbb9418f92f8360e3694f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5322,7 +5328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d1c39d074497444a9eb6a902ad4ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  m_Material: {fileID: 2100000, guid: 4d3d8974c16dbb9418f92f8360e3694f, type: 2}
   subdivisions: 1
 --- !u!1 &660545999
 GameObject:
@@ -5748,7 +5754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.79215693, g: 0.21176472, b: 0, a: 1}
+  m_Color: {r: 0.68783385, g: 0.17986828, b: 0.8867924, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7183,7 +7189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.348, y: 35}
+  m_AnchoredPosition: {x: -44.999985, y: 29.000011}
   m_SizeDelta: {x: 102.69, y: 17.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &775780888
@@ -7217,7 +7223,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Planet Name
+  m_Text: Planet 1
 --- !u!222 &775780889
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7457,7 +7463,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  - {fileID: 2100000, guid: 78f642926f8c9d942b7d42dc63d23075, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7551,7 +7557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d1c39d074497444a9eb6a902ad4ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  m_Material: {fileID: 2100000, guid: 0b8900fc4bafb3b4b8fdb227832fc31e, type: 2}
   subdivisions: 1
 --- !u!1 &792565671
 GameObject:
@@ -7890,7 +7896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.79215693, g: 0.21176472, b: 0, a: 1}
+  m_Color: {r: 0.8018868, g: 0.20918787, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8511,7 +8517,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  - {fileID: 2100000, guid: df615208a487e444eab15abd737e858e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8605,7 +8611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d1c39d074497444a9eb6a902ad4ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  m_Material: {fileID: 2100000, guid: df615208a487e444eab15abd737e858e, type: 2}
   subdivisions: 1
 --- !u!1 &893010928
 GameObject:
@@ -8724,8 +8730,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 161.6, y: -25}
-  m_SizeDelta: {x: 185, y: 50}
+  m_AnchoredPosition: {x: 161.6, y: -30}
+  m_SizeDelta: {x: 185, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899697299
 MonoBehaviour:
@@ -8740,7 +8746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.392}
+  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.79607844}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -10052,7 +10058,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  - {fileID: 2100000, guid: e80fcfdabd91c874da5191afec594cf1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10146,7 +10152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d1c39d074497444a9eb6a902ad4ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  m_Material: {fileID: 2100000, guid: e80fcfdabd91c874da5191afec594cf1, type: 2}
   subdivisions: 1
 --- !u!1 &1052053900
 GameObject:
@@ -10764,6 +10770,7 @@ GameObject:
   - component: {fileID: 1093048654}
   - component: {fileID: 1093048653}
   - component: {fileID: 1093048652}
+  - component: {fileID: 1093048659}
   m_Layer: 0
   m_Name: moon
   m_TagString: Moon
@@ -10888,7 +10895,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093048650}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!114 &1093048658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10901,6 +10908,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ca543116d9b7e48a91c5db095172b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1093048659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093048650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d1c39d074497444a9eb6a902ad4ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  subdivisions: 1
 --- !u!1 &1102593966
 GameObject:
   m_ObjectHideFlags: 0
@@ -11019,7 +11040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.79215693, g: 0.21176472, b: 0, a: 1}
+  m_Color: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -12368,7 +12389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.79215693, g: 0.21176472, b: 0, a: 1}
+  m_Color: {r: 0.2, g: 0.44921172, b: 0.85882354, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -13383,7 +13404,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 26142b813944b814892f97c9fb1973cf, type: 2}
+  - {fileID: 2100000, guid: 0fd8049ae12b7ef4cb7e79fc4a1df13a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13438,7 +13459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d1c39d074497444a9eb6a902ad4ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  m_Material: {fileID: 2100000, guid: 0fd8049ae12b7ef4cb7e79fc4a1df13a, type: 2}
   subdivisions: 1
 --- !u!1 &1372902360
 GameObject:
@@ -14208,8 +14229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 161.60002, y: -185}
-  m_SizeDelta: {x: 185, y: 50}
+  m_AnchoredPosition: {x: 161.60002, y: -190}
+  m_SizeDelta: {x: 185, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1450771332
 MonoBehaviour:
@@ -14224,7 +14245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.392}
+  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.79607844}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -15459,7 +15480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.79215693, g: 0.21176472, b: 0, a: 1}
+  m_Color: {r: 0.7264151, g: 0.5629933, b: 0.19530971, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -15938,8 +15959,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 161.60002, y: -225}
-  m_SizeDelta: {x: 185, y: 50}
+  m_AnchoredPosition: {x: 161.60002, y: -230}
+  m_SizeDelta: {x: 185, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1632587553
 MonoBehaviour:
@@ -15954,7 +15975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.392}
+  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.79607844}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -16020,8 +16041,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 161.60002, y: 15}
-  m_SizeDelta: {x: 185, y: 50}
+  m_AnchoredPosition: {x: 161.60002, y: 10}
+  m_SizeDelta: {x: 185, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1640270096
 MonoBehaviour:
@@ -16036,7 +16057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.392}
+  m_Color: {r: 0.9811321, g: 0.47897372, b: 0.013883919, a: 0.79607844}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -17103,7 +17124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.348, y: 35}
+  m_AnchoredPosition: {x: -44.999985, y: 29.000011}
   m_SizeDelta: {x: 102.69, y: 17.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1724133231
@@ -17137,7 +17158,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Planet Name
+  m_Text: Planet 2
 --- !u!222 &1724133232
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17648,7 +17669,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 327.1, y: -200}
+  m_AnchoredPosition: {x: 329, y: -158}
   m_SizeDelta: {x: 118.2, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1756436299
@@ -17929,7 +17950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.348, y: 35}
+  m_AnchoredPosition: {x: -44.999985, y: 29.000011}
   m_SizeDelta: {x: 102.69, y: 17.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1809151059
@@ -17963,7 +17984,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Planet Name
+  m_Text: Planet 3
 --- !u!222 &1809151060
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19001,7 +19022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.348, y: 35}
+  m_AnchoredPosition: {x: -45, y: 29}
   m_SizeDelta: {x: 102.69, y: 17.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1910638008
@@ -19035,7 +19056,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Planet Name
+  m_Text: Planet 5
 --- !u!222 &1910638009
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19365,7 +19386,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  - {fileID: 2100000, guid: 00da42b48473bf64d8acf1489d0eca06, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19459,7 +19480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d1c39d074497444a9eb6a902ad4ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  m_Material: {fileID: 2100000, guid: 00da42b48473bf64d8acf1489d0eca06, type: 2}
   subdivisions: 1
 --- !u!1 &1947044801
 GameObject:
@@ -19645,7 +19666,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  - {fileID: 2100000, guid: fbe2c5def9c3df341972ad94d28f76a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19739,7 +19760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d1c39d074497444a9eb6a902ad4ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 6df46b90d5389574eba4f0340372f92a, type: 2}
+  m_Material: {fileID: 2100000, guid: fbe2c5def9c3df341972ad94d28f76a2, type: 2}
   subdivisions: 1
 --- !u!1 &1962091736
 GameObject:
@@ -19854,7 +19875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 327.1, y: -230}
+  m_AnchoredPosition: {x: 328.99994, y: -188}
   m_SizeDelta: {x: 118.2, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1962533767
@@ -20845,7 +20866,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.348, y: 35}
+  m_AnchoredPosition: {x: -44.999985, y: 29.000011}
   m_SizeDelta: {x: 102.69, y: 17.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2139993661
@@ -20879,7 +20900,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Planet Name
+  m_Text: Planet 6
 --- !u!222 &2139993662
 CanvasRenderer:
   m_ObjectHideFlags: 0
