@@ -14,13 +14,33 @@ public class PlanetManager : MonoBehaviour
     private Camera mainCamera;
     public float startFOV = 20;
     public float fovAddition = 15; // Amount by which FOC increases when creating a planet
+    private float targetFOV;
+    public float cameraSpeed = 1;
+
+    private bool zoomOut = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();      
+       
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        mainCamera.fieldOfView = startFOV;
     }
 
+
+    public void Update()
+    {
+        if (zoomOut == false)
+        {
+
+
+            mainCamera.fieldOfView = Mathf.MoveTowards(mainCamera.fieldOfView, targetFOV, cameraSpeed * Time.deltaTime);
+            if (mainCamera.fieldOfView == targetFOV)
+            {
+                zoomOut = true;
+            }
+        }
+    }
 
     public void CreatePlanet()
     {
@@ -30,9 +50,8 @@ public class PlanetManager : MonoBehaviour
         orbitNumber++;
         planetNumber++;
 
-        mainCamera.fieldOfView = startFOV;
+        targetFOV = mainCamera.fieldOfView + fovAddition;
 
-        startFOV = startFOV + fovAddition;
-       
+        zoomOut = false;
     }
 }
