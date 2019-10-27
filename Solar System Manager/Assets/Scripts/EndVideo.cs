@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class EndVideo : MonoBehaviour
 {
-    [SerializeField] Transform gameUI;
+    [SerializeField] Transform gameUI, endUI;
 
-    [SerializeField] Transform endUI;
+    [SerializeField] Text victoryScoreText;
 
     float timer = Manager.timer;
     bool videoPlayed = false;
@@ -20,7 +21,7 @@ public class EndVideo : MonoBehaviour
     {
         if (!videoPlayed)
         {
-            victoryScore = ScoreTrigger.Score;
+            victoryScore = Mathf.Round(ScoreTrigger.Score);
             GameObject camera = GameObject.Find("MainCamera");
             var videoPlayer = camera.AddComponent<UnityEngine.Video.VideoPlayer>();
             videoPlayer.playOnAwake = false;
@@ -52,5 +53,6 @@ public class EndVideo : MonoBehaviour
     void EndScreen()
     {
         endUI.gameObject.SetActive(true);
+        victoryScoreText.text = "Score: " + victoryScore;
     }
 }

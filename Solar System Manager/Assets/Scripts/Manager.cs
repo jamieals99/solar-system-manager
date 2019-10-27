@@ -16,12 +16,15 @@ public class Manager : MonoBehaviour
     Transform pauseMenu, gameUI, onStartUI, endUI;
 
     [SerializeField]
-    Text timeText, pointText, matterText, createCost;
+    Text timeText, pointText, matterText, createCost, systemNameDisplay, systemInputName;
 
+    [SerializeField]
     private Text timerText;
+
+    [SerializeField]
     private float mainTimer;
 
-
+    private string systemName;
     public static float timer;
     private bool canCount = true;
     private bool doOnce = false;
@@ -129,8 +132,17 @@ public class Manager : MonoBehaviour
     public void Restart()
     {
         resetData();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // On call will load scene 0. ######## NEEDS TO BE CHANGED IF SCENE 0 IS NO LONGER THE GAMEPLAY SCENE #########
-        UnPauseGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlanetManager.planetCost = 0;
+        Start();
+    }
+
+    public void MainRestart()
+    {
+        resetData();
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlanetManager.planetCost = 0;
+        Start();
     }
 
     private void resetData()
@@ -146,15 +158,24 @@ public class Manager : MonoBehaviour
 
     public void loadStartMenu()
     {
-        resetData();
+        MainRestart();
         SceneManager.LoadScene(0);
     }
 
     public void NameToGame()
     {
+        gameStartCheck = true;
         onStartUI.gameObject.SetActive(false);
         gameUI.gameObject.SetActive(true);
+        systemNameDisplay.text = systemInputName.text;
         UnPauseGame();
     }
+
+    /*
+    public void GetText()
+    {
+        systemName = systemInputName.text;
+    }
     
+    */
 }
