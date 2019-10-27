@@ -4,27 +4,21 @@ using UnityEngine;
 
 public class UpgradeScript : MonoBehaviour
 {
-    public static int maxSizeUpgradeCount = 5;
-    public static int sizeUpgradeCount;
-    public static int sizeUpgradeCost = 10;
-    public static int maxSpeedUpgradeCount = 5;
-    public static int speedUpgradeCount;
-    public static int speedUpgradeCost = 10;
-    
+    public int maxSizeUpgradeCount = 5;
+    public int sizeUpgradeCount;
+    public int sizeUpgradeCost = 10;
+    public int maxSpeedUpgradeCount = 5;
+    public int speedUpgradeCount;
+    public int speedUpgradeCost = 10;
+    public int moonCost = 25;
+    private int moonNumber = 0;
+    public GameObject[] moons;
     void Update()
     {
-        if (Input.GetKeyDown("s"))
-        {
-            UpgradeSize();
-        }
-        if(Input.GetKeyDown("d"))
-        {
-            UpgradeSpeed();
-        }
 
     }
 
-    void UpgradeSize()
+    public void UpgradeSize()
     {
         if (sizeUpgradeCost > ResourceGeneration.resources)
         {
@@ -45,7 +39,7 @@ public class UpgradeScript : MonoBehaviour
         }
     }
 
-    void UpgradeSpeed()
+    public void UpgradeSpeed()
     {
         if (speedUpgradeCost > ResourceGeneration.resources)
         {
@@ -66,5 +60,14 @@ public class UpgradeScript : MonoBehaviour
             return;
         }
     }
-
+    public void AddMoon()
+    {
+        if (moonCost > ResourceGeneration.resources)
+        {
+            return;
+        }
+        moons[moonNumber].SetActive(true);
+        moonNumber++;
+        ResourceGeneration.resources = ResourceGeneration.resources - moonCost;
+    }
 }

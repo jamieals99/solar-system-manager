@@ -16,6 +16,7 @@ public class PlanetManager : MonoBehaviour
     private GameObject selectedPlanet;
     private GameObject[] allPlanets;
 
+    
     //private Button btn0;
     //private Button btn1;
     //private Button btn2;
@@ -136,4 +137,6 @@ public class PlanetManager : MonoBehaviour
         zoomOut = false;
     }
 
+
+    
 }
