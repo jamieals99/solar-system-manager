@@ -19,6 +19,8 @@ public class PlanetManager : MonoBehaviour
 
     private bool zoomOut = true;
 
+    public static float planetCost = 0;
+    private bool firstPlanetAdded = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,11 +46,27 @@ public class PlanetManager : MonoBehaviour
 
     public void CreatePlanet()
     {
+        if(planetCost > ResourceGeneration.resources || planets[7].activeSelf == true)
+        {
+            return;
+        }
+
+        ResourceGeneration.resources = ResourceGeneration.resources - planetCost;
+
         planets[planetNumber].SetActive(true);
         orbits[orbitNumber].SetActive(true);
 
         orbitNumber++;
         planetNumber++;
+
+        
+        planetCost = Mathf.Pow(planetNumber+1,2.75f);
+        if (!firstPlanetAdded && planets[0].activeSelf == true)
+        {
+            planetCost = 10;
+            firstPlanetAdded = true;
+        }
+        Debug.Log("Planet Cost: " + planetCost);
 
         targetFOV = mainCamera.fieldOfView + fovAddition;
 

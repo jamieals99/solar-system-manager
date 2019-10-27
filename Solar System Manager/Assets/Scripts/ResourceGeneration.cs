@@ -18,7 +18,7 @@ public class ResourceGeneration : MonoBehaviour
             {
                 yield return new WaitForSeconds(1);
                 resources += 1f * gameObject.transform.lossyScale.x;
-                Debug.Log("Resources: " + resources);
+                //Debug.Log("Resources: " + resources);
             }
         }
         else if (gameObject.tag == "Moon")
@@ -27,7 +27,7 @@ public class ResourceGeneration : MonoBehaviour
             {
                 yield return new WaitForSeconds(1);
                 resources += 0.25f;
-                Debug.Log("Resources: " + resources);
+                //Debug.Log("Resources: " + resources);
             }
         }
 
