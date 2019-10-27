@@ -32,14 +32,23 @@ public class Camera1 : MonoBehaviour
     }
     public Vector3 SwapCameraLocation(int counter)
     {
-        AfterhitLocation = manager.planets[counter].transform.position;
-        Debug.Log(manager.planets[Acounter].transform.position);
-        Debug.Log(AfterhitLocation);
-        return AfterhitLocation + Offset;
+        if (Acounter == -1)
+        {
+            AfterhitLocation = StartLocation;
+            return AfterhitLocation + Offset;
+        }
+        else
+        {
+            AfterhitLocation = manager.planets[counter].transform.position;
+            Debug.Log(manager.planets[Acounter].transform.position);
+            Debug.Log(AfterhitLocation);
+            return AfterhitLocation + Offset;
+        }
     }
     // Update is called once per frame
     void Update()
     {
+
         transform.position = SwapCameraLocation(Acounter);
         if (Input.GetKeyDown("a"))
         {
@@ -54,15 +63,14 @@ public class Camera1 : MonoBehaviour
         }
         if (Input.GetKeyDown("s"))
         {
-            if(Acounter < 0)
+            if(Acounter < -1)
             {
-                Acounter = 0;
+                Acounter = -1;
             }
             else
             {
                 Acounter -= 1;
             }
-
         }
     }
 }
