@@ -133,7 +133,7 @@ public class Manager : MonoBehaviour
     {
         resetData();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        PlanetManager.planetCost = 0;
+        PlanetManager.planetCost = 10;
         Start();
     }
 
@@ -141,7 +141,7 @@ public class Manager : MonoBehaviour
     {
         resetData();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        PlanetManager.planetCost = 0;
+        PlanetManager.planetCost = 10;
         Start();
     }
 
