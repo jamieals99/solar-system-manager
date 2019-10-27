@@ -1,12 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+
+
 
 public class UpgradeScript : MonoBehaviour
 {
+    [SerializeField] Text sizeCostText, speedCostText, moonCostText;
+
     public int maxSizeUpgradeCount = 5;
     public int sizeUpgradeCount;
-    public int sizeUpgradeCost = 10;
+    public  int sizeUpgradeCost = 10;
     public int maxSpeedUpgradeCount = 5;
     public int speedUpgradeCount;
     public int speedUpgradeCost = 10;
@@ -15,7 +21,9 @@ public class UpgradeScript : MonoBehaviour
     public GameObject[] moons;
     void Update()
     {
-
+        sizeCostText.text = sizeUpgradeCost.ToString();
+        speedCostText.text = speedUpgradeCost.ToString();
+        moonCostText.text = moonCost.ToString();
     }
 
     public void UpgradeSize()
