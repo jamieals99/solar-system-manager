@@ -39,7 +39,7 @@ public class PlanetManager : MonoBehaviour
 
     private bool zoomOut = true;
 
-    public static float planetCost = 0;
+    public static float planetCost = 10;
     private bool firstPlanetAdded = false;
     // Start is called before the first frame update
     void Start()
@@ -125,11 +125,7 @@ public class PlanetManager : MonoBehaviour
         buttonNumber++;
 
         planetCost = Mathf.Pow(planetNumber + 1, 2.75f);
-        if (!firstPlanetAdded && planets[0].activeSelf == true)
-        {
-            planetCost = 10;
-            firstPlanetAdded = true;
-        }
+
         Debug.Log("Planet Cost: " + planetCost);
 
         targetFOV = mainCamera.fieldOfView + fovAddition;
