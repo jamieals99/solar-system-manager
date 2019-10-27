@@ -9,36 +9,60 @@ public class Camera1 : MonoBehaviour
     public GameObject CameraLocation;
     public Vector3 Offset;
     public Vector3 StartLocation;
-    public Vector3 CameraPosition2 = new Vector3(0f,90f,16f);
+    public Vector3 AfterhitLocation;
+    public Vector3 CameraPosition2 = new Vector3(0f, 90f, 16f);
     public float xAxis, yAxis, zAxis;
     public Vector3 StartRotation;
     public float StartXRotation = 15f;
     public float StartYRotation = 0f;
     public float StartZRotation = 0f;
+    public Vector3 HitLocation;
+    public bool Apressed = true;
+    public Orbit orbit;
+    public int Acounter = 0;
+    public PlanetManager manager;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
+        manager = GameObject.Find("PlanetManager").GetComponent<PlanetManager>();
         StartLocation = CameraLocation.transform.position;
         StartRotation = new Vector3(StartXRotation, StartYRotation, StartZRotation);
         Debug.Log("Location: " + StartLocation);
         Offset = CameraLocation.transform.position - PlanetLocation.transform.position;
-        transform.position = StartLocation + Offset;
     }
-
+    public Vector3 SwapCameraLocation(int counter)
+    {
+        AfterhitLocation = manager.planets[counter].transform.position;
+        Debug.Log(manager.planets[Acounter].transform.position);
+        Debug.Log(AfterhitLocation);
+        return AfterhitLocation + Offset;
+    }
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("a"))
+        transform.position = SwapCameraLocation(Acounter);
+        if (Input.GetKeyDown("a"))
         {
-            transform.position = StartLocation;
-            transform.position += CameraPosition2;
-            transform.Rotate(75f, 0f, 0f);
+            if (Acounter > 8)
+            {
+                Acounter = 8;
+            }
+            else
+            {
+                Acounter += 1;
+            }
         }
-        if(Input.GetKeyUp("a"))
+        if (Input.GetKeyDown("s"))
         {
-            transform.Rotate(-75f, 0f , 0f);
-            transform.position = StartLocation;
-            transform.position += Offset;
+            if(Acounter < 0)
+            {
+                Acounter = 0;
+            }
+            else
+            {
+                Acounter -= 1;
+            }
+
         }
     }
 }
