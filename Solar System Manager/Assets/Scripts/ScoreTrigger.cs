@@ -8,7 +8,7 @@ public class ScoreTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag=="Planet") // If planet enters trigger then it'll add points, moon won't add points.
         {
-            Score += 10f * collision.gameObject.transform.lossyScale.x * collision.gameObject.GetComponent<Orbit>().radius; // Increases score by 100 whenever an object enters the triggerbox.
+            Score += 20f * collision.gameObject.transform.lossyScale.x * collision.gameObject.GetComponent<Orbit>().radius; // Increases score by 100 whenever an object enters the triggerbox.
             //Debug.Log("Score: " + Score); // Displays score to the debug log.
         }
         else if (collision.gameObject.tag=="Moon")
