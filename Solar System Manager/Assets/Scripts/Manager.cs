@@ -12,21 +12,15 @@ public class Manager : MonoBehaviour
 {
     // --- Variable Declarations ----------------------------------------------------------------------------- //
 
-    [SerializeField] Transform pauseMenu; // Will assign panel to this variable so it can be enabled/disabled.
+    [SerializeField]
+    Transform pauseMenu, gameUI, onStartUI, endUI;
 
-    [SerializeField] Transform gameUI;
+    [SerializeField]
+    Text timeText, pointText, matterText, createCost;
 
-    [SerializeField] Transform onStartUI;
+    private Text timerText;
+    private float mainTimer;
 
-    [SerializeField] Text timeText; // Will assign time text to this variable so the text it displays can be modified.
-
-    [SerializeField] Text pointText; // Will be used to assign the points-txt to this script.
-
-    [SerializeField] Text matterText;
-
-    [SerializeField] private Text timerText;
-
-    [SerializeField] private float mainTimer;
 
     public static float timer;
     private bool canCount = true;
@@ -43,6 +37,7 @@ public class Manager : MonoBehaviour
         timer = mainTimer;
         pauseMenu.gameObject.SetActive(false); // Pause menu will be disabled on startup.
         gameUI.gameObject.SetActive(false);
+        endUI.gameObject.SetActive(false);
         onStartUI.gameObject.SetActive(true);
         Time.timeScale = 0f;
         isPaused = false; // Makes sure isPaused is false when the scene starts.
@@ -69,6 +64,7 @@ public class Manager : MonoBehaviour
         timeText.text = "Time Since Startup: " + Mathf.Round(Time.timeSinceLevelLoad) + " seconds"; // Displays the time since the scene loaded.
         pointText.text = "Score: " + Mathf.Round(ScoreTrigger.Score);
         matterText.text = "Matter: " + Mathf.Round(ResourceGeneration.resources);
+        createCost.text = "Cost: " + Mathf.Round(PlanetManager.planetCost);
 
         if (Input.GetKeyDown(KeyCode.Escape) && !isPaused && gameStartCheck) //If the esc key is pressed and the game isnt in a paused state run the Pause() function.
         {
@@ -158,6 +154,7 @@ public class Manager : MonoBehaviour
     {
         onStartUI.gameObject.SetActive(false);
         gameUI.gameObject.SetActive(true);
+        UnPauseGame();
     }
     
 }

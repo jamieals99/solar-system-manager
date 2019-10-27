@@ -2,6 +2,9 @@
 
 public class EndVideo : MonoBehaviour
 {
+    [SerializeField] Transform gameUI;
+
+    [SerializeField] Transform endUI;
 
     float timer = Manager.timer;
     bool videoPlayed = false;
@@ -10,6 +13,7 @@ public class EndVideo : MonoBehaviour
     void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
         vp.Stop();
+        EndScreen();
     }
 
     void PlayVideo()
@@ -26,7 +30,8 @@ public class EndVideo : MonoBehaviour
             videoPlayer.loopPointReached += EndReached;
             videoPlayer.Play();
             videoPlayed = true;
-            EndScreen();
+            DisableUI();
+            
         }
     }
     // Update is called once per frame
@@ -39,8 +44,13 @@ public class EndVideo : MonoBehaviour
         }
     }
 
+    void DisableUI()
+    {
+        gameUI.gameObject.SetActive(false);
+    }
+
     void EndScreen()
     {
-        
+        endUI.gameObject.SetActive(true);
     }
 }
