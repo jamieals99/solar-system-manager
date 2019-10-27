@@ -35,7 +35,7 @@ public class UpgradeScript : MonoBehaviour
 
         if (sizeUpgradeCount < maxSizeUpgradeCount) 
         {
-            gameObject.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
+            gameObject.transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
             ResourceGeneration.resources = ResourceGeneration.resources - sizeUpgradeCost;
             sizeUpgradeCount++;
             sizeUpgradeCost += 10;
