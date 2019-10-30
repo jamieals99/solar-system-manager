@@ -17,7 +17,7 @@ public class ResourceGeneration : MonoBehaviour
             while (true)
             {
                 yield return new WaitForSeconds(1);
-                resources += 1f * gameObject.transform.lossyScale.x;
+                resources += 2f * gameObject.transform.lossyScale.x;
                 //Debug.Log("Resources: " + resources);
             }
         }
@@ -26,7 +26,7 @@ public class ResourceGeneration : MonoBehaviour
             while (true)
             {
                 yield return new WaitForSeconds(1);
-                resources += 0.25f;
+                resources += 1f * gameObject.transform.lossyScale.x;
                 //Debug.Log("Resources: " + resources);
             }
         }
@@ -36,9 +36,6 @@ public class ResourceGeneration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("o"))
-        {
-            resources += 10000;
-        }
+
     }
 }
